@@ -1,9 +1,9 @@
 from flask import Blueprint, render_template
 from flask_login import current_user
-from .models import Wallet
+# from .models import Wallet
 from . import db
-import json
-from WhaleHunter import get_list_of_normal_transactions
+# import json
+from ETH_graph import get_list_of_normal_transactions
 
 transactions = Blueprint('transacitons', __name__)
 

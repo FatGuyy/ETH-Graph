@@ -1,6 +1,6 @@
-from crypt import methods
+# from crypt import methods
 from curses import flash
-from unicodedata import category
+# from unicodedata import category
 from urllib import request
 from flask import Blueprint, render_template, request, flash, jsonify
 from flask_login import login_required, current_user
