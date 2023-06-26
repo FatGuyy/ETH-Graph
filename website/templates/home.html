@@ -1,0 +1,25 @@
+{% extends "base.html" %} {% block title %}Home{% endblock %} {% block content
+	%}
+	<br />
+	<h1 align="center">Wallets</h1>
+	<br />
+	<ul class="list-group list-group-flush" id="wallets">
+		{% for wallet in user.wallets %}
+			<a href={{wallet.address}}>
+				<li class="list-group-item" onclick={{wallet.address}}>
+					{{ wallet.address }}
+					<button type="button" class="close" onClick="deleteWallet({{ wallet.id }})">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</li>
+			</a>
+		{% endfor %}
+	</ul>
+	<form method="POST">
+		<textarea name="wallet" id="wallet" class="form-control"></textarea>
+		<br />
+		<div align="center">
+			<button type="submit" class="btn btn-primary">Add Wallet</button>
+		</div>
+	</form>
+{% endblock %}
